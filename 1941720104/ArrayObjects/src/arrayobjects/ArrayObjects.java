@@ -3,19 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pertemuan2;
+package arrayobjects;
 
 /**
  *
  * @author Daffa Cahyo
  */
-public class Pertemuan2 {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
+public class ArrayObjects {
     
 }
