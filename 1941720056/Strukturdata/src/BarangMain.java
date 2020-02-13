@@ -11,7 +11,9 @@ public class BarangMain {
    int hargaTotal = bl.hitungHargaTotal(4);
    System.out.println("Harga 4 buah = "+hargaTotal);
    
-   Barang b2 = new Barang("Logitech","Wireless Mouse",150000,25);
+   Barang b2 = new Barang("Logitech","Wireless Mouse",25,150000);
    b2.tampilBarang();
+   Barang b3 = new Barang("Lenovo","Laptop",10,5000000);
+   b3.tampilBarang();
 }
 }
