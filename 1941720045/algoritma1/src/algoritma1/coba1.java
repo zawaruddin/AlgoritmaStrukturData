@@ -10,5 +10,8 @@ package algoritma1;
  * @author HOSNOL ARIFIN
  */
 public class coba1 {
-    
+    public static void main(String[] args) {
+        
+    }
+  
 }
