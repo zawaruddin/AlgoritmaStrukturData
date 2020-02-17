@@ -8,14 +8,14 @@ public class Lingkaran {
         r=jari2;
         PHI = phi;
     }
-    public double hitungLuas(double phi, double r){
+    public double hitungLuas(){
         double luas;
-        luas = phi*r*r;
+        luas = PHI*r*r;
         return luas;
     }
-    public double hitungKeliling(double phi, double r){
+    public double hitungKeliling(){
         double keliling;
-        keliling = 2*phi*r;
+        keliling = 2*PHI*r;
         return keliling;
     }
 
