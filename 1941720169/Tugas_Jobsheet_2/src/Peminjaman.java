@@ -1,20 +1,22 @@
 public class Peminjaman {
-    public String id,namaMember,namaGame;
+    public String ID,namaMember,namaGame;
     public int lamaPinjam, hargaSewa;
+    
     public Peminjaman(){
         
     }
-    public Peminjaman(String i,String nmM, String nmG, int lp, int hs){
-        id = i;
-        namaMember = nmM;
-        namaGame = nmG;
-        lamaPinjam = lp;
-        hargaSewa = hs;
+    public Peminjaman(String id, String nM, String nG, int lmSewa, int hSewa){
+        ID = id;
+        namaMember = nM;
+        namaGame = nG;
+        lamaPinjam = lmSewa;
+        hargaSewa = hSewa;
     }
     void tampil(){
         System.out.println("Nama member = " + namaMember);
         System.out.println("Nama Game   = " + namaGame);
         System.out.println("Lama pinjam = " + lamaPinjam);
-        System.out.println("Harga Sewa  = " + hargaSewa);
+        System.out.println("Harga Sewa  = Rp." + (lamaPinjam*hargaSewa));
     }
+
 }

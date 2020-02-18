@@ -2,14 +2,6 @@ public class Barang {
     public String nama;
     public int hargaSatuan, jumlah;
     
-    public Barang(){
-        
-    }
-    public Barang(String nm, int hS,int jml){
-        nama = nm;
-        hargaSatuan = hS;
-        jumlah = jml;
-    }
     int hitungHargaTotal(){
         return hargaSatuan * jumlah;
     }
