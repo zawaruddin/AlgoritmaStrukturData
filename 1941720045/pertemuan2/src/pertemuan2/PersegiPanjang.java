@@ -20,7 +20,7 @@ public class PersegiPanjang {
              System.out.println("Persegi Panjang ke-"+i);
              System.out.print("Masukkan panjang : ");
              ppArray[0].panjang=arif.nextInt();
-             System.out.println("Masukkan lebar: ");
+             System.out.print("Masukkan lebar: ");
              ppArray[0].lebar=arif.nextInt();
          }
          for(int i=0;i<3;i++){
