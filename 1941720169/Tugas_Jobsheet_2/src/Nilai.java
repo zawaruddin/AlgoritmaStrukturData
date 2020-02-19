@@ -1,7 +1,7 @@
 
 public class Nilai {
 
-    public int nilai1, nilai2, jumlah;
+    public int nilai1, nilai2;
 
     public Nilai() {
 
@@ -10,7 +10,6 @@ public class Nilai {
     public Nilai(int n1, int n2, int jml) {
         nilai1 = n1;
         nilai2 = n2;
-        jumlah = jml;
     }
 
     void nilaiTerbaik() {

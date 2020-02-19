@@ -30,6 +30,6 @@ public class TanahTerluasMain {
                 x=i;
             }
         }
-        System.out.println("\nTanah Terluas: Tanah ke-"+(x+1));
+        System.out.println("\nTanah Terluas: Tanah ke-"+(x+1)+" dengan luas "+terluas);
     }
 }

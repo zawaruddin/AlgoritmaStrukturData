@@ -13,6 +13,7 @@ public class Peminjaman {
         hargaSewa = hSewa;
     }
     void tampil(){
+        System.out.println("ID member   = " + ID);
         System.out.println("Nama member = " + namaMember);
         System.out.println("Nama Game   = " + namaGame);
         System.out.println("Lama pinjam = " + lamaPinjam);
