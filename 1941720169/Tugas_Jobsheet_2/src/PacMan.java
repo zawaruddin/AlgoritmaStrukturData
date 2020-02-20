@@ -30,7 +30,6 @@ public class PacMan {
                 } else {
                     System.out.print(" ");
                 }
-
             }
             System.out.println();
         }
