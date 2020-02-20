@@ -1,5 +1,15 @@
 public class Pangkat {
     public int nilai,pangkat;
+    
+    Pangkat() {
+        
+    }
+    Pangkat (int n,int p){
+        nilai=n;
+        pangkat=p;
+    }
+
+    
     public int pangkatBF(int a,int n){
         int hasil=1;
         for (int i = 0; i < n; i++) {
