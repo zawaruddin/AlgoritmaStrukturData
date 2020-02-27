@@ -1,4 +1,4 @@
-import java.util.Scanner;
+ import java.util.Scanner;
 public class MainFaktorial {
     public static void main(String[] args) {
         Scanner retno = new Scanner(System.in);
