@@ -17,7 +17,7 @@ public class minMax {
     }
     
     public static void max_min(int[] arr, int indeks_awal, int indeks_akhir, Maxmin hasil){
-        int indeks_tengah;
+        int indeks_tengah;                                       
         Maxmin hasil1 = new Maxmin();
         Maxmin hasil2 = new Maxmin();
         

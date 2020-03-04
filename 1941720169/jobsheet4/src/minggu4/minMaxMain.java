@@ -6,10 +6,9 @@ public class minMaxMain {
 
     public static void main(String[] args) {
         minMax[] ppArray = new minMax[5];
-        
         int nilaiArray[] =  new int[5];
         Scanner dhimas = new Scanner(System.in);
-
+        
         for (int i = 0; i < 5; i++) {
             ppArray[i] = new minMax();
             System.out.println("Nilai array indeks ke-" + i);

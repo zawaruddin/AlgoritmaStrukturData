@@ -10,7 +10,7 @@ public class FibonacciMain {
         System.out.print("Masukkan angka: ");
         fb.angka = dhimas.nextInt();
 
-        fb.hitungFiboBF(fb.angka);
+        fb.hitungFiboBF();
         System.out.println("");
         for (int i = 0; i < fb.angka; i++) {
             System.out.print(fb.hitungFiboDC(i)+" ");
