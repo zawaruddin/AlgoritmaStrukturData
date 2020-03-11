@@ -1,17 +1,16 @@
-package Tugas;
-
+package TugasMinggu3;
 import java.util.Scanner;
-
-public class NilaiModifMain {
+public class NilaiAlgoritmaMain {
     public static void main(String[] args) {
         Scanner dhimas = new Scanner (System.in);
         Scanner arbi = new Scanner(System.in);
+        int total=0 ,jml;
         System.out.print("Masukkan jumlah Mahasiswa: ");
-        int jml = dhimas.nextInt();
-        NilaiModif[] na = new NilaiModif[jml];
+        jml = dhimas.nextInt();
+        NilaiAlgoritma[] na = new NilaiAlgoritma[jml];
         
         for(int i =0;i<jml;i++){
-            na[i] = new NilaiModif();
+            na[i] = new NilaiAlgoritma();
             System.out.println("=================================================");
             System.out.print("Masukkan nama mahasiswa ke-"+(i+1)+" : ");
             na[i].namaMhs = arbi.nextLine();
@@ -26,7 +25,9 @@ public class NilaiModifMain {
             System.out.println("=================================================");
         }
         for(int i=0;i<jml;i++){
-            System.out.printf("Nilai mahasiswa "+na[i].namaMhs+" adalah %.2f\n",na[i].HitungTotalNilaiDC(jml));
+            total += na[i].hitungTotalNilai(jml);
+            System.out.printf("Nilai mahasiswa "+na[i].namaMhs+" adalah %.2f\n",na[i].hitungTotalNilai(jml));
         }
+        System.out.printf("Rata-rata total : %.2f\n",(double)(total/jml));
     }
 }

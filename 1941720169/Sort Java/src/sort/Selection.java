@@ -13,6 +13,7 @@ public class Selection {
                     minIndex = j;
                     minValue = list[j];
                     swap(i, minIndex, list);
+                    System.out.println("i: "+i+" | "+"j: "+j+" | "+"minIndex: "+minIndex);
                     print(list);
                 }
             }

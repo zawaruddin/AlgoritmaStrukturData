@@ -1,4 +1,4 @@
-package Tugas;
+package TugasMinggu3;
 
 public class NilaiAlgoritma {
     public String namaMhs;

@@ -1,5 +1,5 @@
 
-package Tugas;
+package TugasMinggu3;
 
 public class NilaiModif {
     public String namaMhs;
