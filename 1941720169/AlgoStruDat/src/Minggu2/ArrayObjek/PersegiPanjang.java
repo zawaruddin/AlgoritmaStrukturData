@@ -1,4 +1,4 @@
-package arrayobjects;
+package Minggu2.ArrayObjek;
 import java.util.Scanner;
 public class PersegiPanjang {
     public int panjang;

@@ -1,4 +1,4 @@
-package strukturdata;
+package Minggu2.StrukDat;
 
 public class Barang {
     String namaBarang, jenisBarang;

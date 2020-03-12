@@ -1,5 +1,5 @@
 
-package strukturdata;
+package Minggu2.StrukDat;
 
 public class BarangMain {
     public static void main(String[] args) {
