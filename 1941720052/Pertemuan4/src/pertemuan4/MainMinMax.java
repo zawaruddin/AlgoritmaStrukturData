@@ -26,15 +26,7 @@ public class MainMinMax {
         for(int a=0; a<5; a++){
             System.out.println("Nilai pada indeks ke-["+a+"] adalah "+ppArray[a].nilaiArray);
         }
-//        int min = ppArray[0].nilaiArray;
-//        int max = ppArray[0].nilaiArray;
-//        for (int a = 0; a < 5; a++) {
-//            if (ppArray[a].nilaiArray < ppArray[a].min) {
-//                ppArray[a].min = ppArray[a].nilaiArray;
-//            } else if (ppArray[a].nilaiArray > ppArray[a].max) {
-//                ppArray[a].max = ppArray[a].nilaiArray;
-//            }
-//        }
+
         int arr[] = new int[5];
         for(int a=0; a<5; a++){
             arr[a] = ppArray[a].nilaiArray;
