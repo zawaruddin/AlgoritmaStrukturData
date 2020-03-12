@@ -1,14 +1,23 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package TugasMinggu5;
 
-/**
- *
- * @author Windows
- */
 public class Tiket {
-    
+    String nmPesawat;
+    float harga;
+    int stokTersedia, stokTerjual;
+
+    Tiket(String n, float a, int b, int c){
+        nmPesawat = n;
+        harga = a;
+        stokTersedia = b;
+        stokTerjual = c;
+    }
+    void tampil(){
+        
+    }
+    void bubbleSort(){
+        
+    }
+    void selectionSort(){
+        
+    }
 }
