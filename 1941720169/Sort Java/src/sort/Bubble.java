@@ -12,7 +12,7 @@ public class Bubble {
                 k = j + 1;
                 if (arr[j] > arr[k]) {
                     swap(j, k, arr);
-                    System.out.println("j: "+j+" | "+"k: "+k); 
+                    //System.out.println("j: "+j+" | "+"k: "); 
                 }
             }
             print(arr);

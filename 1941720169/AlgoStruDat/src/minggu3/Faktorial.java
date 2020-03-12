@@ -6,6 +6,7 @@ public class Faktorial {
 
     public int faktorialBF(int n) {
         int fakto = 1, i=1;
+        int total=0;
 //        for (int i = 1; i <= n; i++) {
 //            fakto = fakto * i;
 //        }
@@ -15,8 +16,10 @@ public class Faktorial {
 //        }while(i<=n);
         while(i<=n){
             fakto = fakto*i;
+            //total=total+fakto;
             i++;
         }
+        System.out.println(total);
         return fakto;
     }
 
