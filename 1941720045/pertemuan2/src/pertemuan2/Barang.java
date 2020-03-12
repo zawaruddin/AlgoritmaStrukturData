@@ -15,7 +15,7 @@ public class Barang {
     
  //Barang (){
  //}
- //arang(String nm,String jn,int st, int hs){
+ //Barang(String nm,String jn,int st, int hs){
     // namaBarang = nm;
     // jenisBarang = jn;
     // stok   = st;
