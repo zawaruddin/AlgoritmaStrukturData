@@ -3,14 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tugas4;
+package Tugas;
 
 /**
  *
  * @author Daffa Cahyo
  */
-class maxMin {
-
-    public int maximum;
-    public int minimum;
+public class TugasNomor1 {
+    
 }

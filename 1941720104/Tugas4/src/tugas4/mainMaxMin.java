@@ -12,7 +12,7 @@ package tugas4;
 import java.util.Scanner;
 import static tugas4.minMax.max_min;
 
-public class mainMinMax {
+public class mainMaxMin {
 
     public static void main(String[] args) {
         minMax[] ppArray = new minMax[5];
@@ -45,3 +45,10 @@ public class mainMinMax {
         System.out.print("\n");
     }
 }
+//Jumlah Operasi: 1 + 1 + 1 + (5 * 1 * 1) + (5 * 1) + 1 + (5 * 1) + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1
+//              : 3 + 5 + 5 + 1 + 5 + 10
+//              : 29 Operasi
+//Notasi BigO   : O(n) + O(n) + O(n) 
+//              : 3 * O(n)
+//              : 3 * O(5)
+//              : 15

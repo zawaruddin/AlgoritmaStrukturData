@@ -15,11 +15,12 @@ public class Nomor8TanahTerluas {
 
     public static void main(String[] args) {
         Scanner daffa = new Scanner(System.in);
+        Nomor8TanahTerluas2 tanah3 = new Nomor8TanahTerluas2();
         int jumlah, temp = 0, tanah = 0;
         System.out.print("Jumlah tanah: ");
-        jumlah = daffa.nextInt();
+        tanah3.jmlTanah = daffa.nextInt();
 
-        Nomor8TanahTerluas2 tanah2[] = new Nomor8TanahTerluas2[jumlah];
+        Nomor8TanahTerluas2 tanah2[] = new Nomor8TanahTerluas2[tanah3.jmlTanah];
 
         for (int a = 0; a < tanah2.length; a++) {
             System.out.println("Tanah ke-" + (a + 1));
