@@ -9,4 +9,3 @@ class Maxmin {
     public int minimum;
 
 }
-

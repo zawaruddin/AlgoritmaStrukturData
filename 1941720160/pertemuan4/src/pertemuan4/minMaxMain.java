@@ -11,13 +11,13 @@ public class minMaxMain {
     minMax[] ppArray=new minMax[5];
     ppArray[0]=new minMax();
     
-    Scanner sholikin=new Scanner(System.in);
+    Scanner irul=new Scanner(System.in);
     
     for (int i=0; i<5; i++){
         ppArray[i]=new minMax();
         System.out.println("Nilai array indeks ke-"+i);
         System.out.print("Masukkan Nilai: ");
-        ppArray[i].nilaiArray=sholikin.nextInt();
+        ppArray[i].nilaiArray=irul.nextInt();
     }
     
     int min=ppArray[0].nilaiArray;
