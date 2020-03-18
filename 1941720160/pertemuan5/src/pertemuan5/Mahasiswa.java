@@ -1,9 +1,4 @@
 package pertemuan5;
-
-/**
- *
- * @author khoirul
- */
 public class Mahasiswa {
     String nama;
     int thnMasuk, umur;

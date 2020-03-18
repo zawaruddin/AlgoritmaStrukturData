@@ -1,9 +1,4 @@
 package pertemuan5;
-
-/**
- *
- * @author khoirul
- */
 public class DaftarMahasiswaBerprestasi {
     Mahasiswa listMhs[] = new Mahasiswa[5];
     int idx;

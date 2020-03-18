@@ -2,20 +2,20 @@ package pertemuan5;
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args){
-        Scanner irul=new Scanner(System.in);
-        Scanner udin=new Scanner(System.in);
+        Scanner sholikin=new Scanner(System.in);
+        Scanner micin=new Scanner(System.in);
         DaftarMahasiswaBerprestasi data = new DaftarMahasiswaBerprestasi();
         int jumMhs=5;
         
         for (int i=0; i<jumMhs; i++){
             System.out.print("Nama = ");
-            String nama = udin.nextLine();
+            String nama = micin.nextLine();
             System.out.print("Thn masuk = ");
-            int thn = irul.nextInt();
+            int thn = sholikin.nextInt();
             System.out.print("Umur = ");
-            int umur = irul.nextInt();
+            int umur = sholikin.nextInt();
             System.out.print("IPK = ");
-            double ipk = irul.nextDouble();
+            double ipk = sholikin   .nextDouble();
             
             Mahasiswa m = new Mahasiswa(nama, thn, umur, ipk);
             data.tambah(m);
