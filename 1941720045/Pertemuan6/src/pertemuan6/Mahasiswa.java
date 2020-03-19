@@ -23,7 +23,6 @@ double ipk;
         ipk = i;
     }
   
-
     
      void tampil(){
          System.out.println("\nNama = "+nama);

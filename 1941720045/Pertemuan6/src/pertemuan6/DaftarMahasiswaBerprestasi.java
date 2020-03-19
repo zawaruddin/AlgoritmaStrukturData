@@ -55,15 +55,22 @@ public class DaftarMahasiswaBerprestasi {
         }
     }
     
-    void InsertionSort(){
+    void InsertionSort(boolean ascending){
     int i,j;
         for (i = 1; i < listMhs.length; i++) {
             Mahasiswa temp=new Mahasiswa();
             temp=listMhs[i];
             j=i;
-            while((j>0)&&(listMhs[j-1].ipk>temp.ipk)){
+            if(ascending){
+                while((j>0)&&(listMhs[j-1].ipk>temp.ipk)){
                 listMhs[j]=listMhs[j-1];
                 j--;
+                }
+            }else{
+               while((j>0)&&(listMhs[j-1].ipk<temp.ipk)){
+                listMhs[j]=listMhs[j-1];
+                j--; 
+                }
             }
             listMhs[j]=temp;
         }

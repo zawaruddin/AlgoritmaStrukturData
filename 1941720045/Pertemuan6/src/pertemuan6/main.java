@@ -38,7 +38,7 @@ public class main {
         data.selectionSort();
         data.tampil();
         System.out.println("Data setelah di Insertion sort = ");
-        data.InsertionSort();
+        data.InsertionSort(false);
         data.tampil();
     }
 }
