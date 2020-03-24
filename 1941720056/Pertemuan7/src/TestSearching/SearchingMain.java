@@ -12,7 +12,6 @@ public class SearchingMain {
         int posisi=1;
         System.out.println("menggunkan sequential search");
         posisi = pencarian.FindSeqSearch(cari);
-        
         pencarian.Tampilposisi(cari, posisi);
         System.out.println("====================");
         System.out.println("menggunakan binary search ");
