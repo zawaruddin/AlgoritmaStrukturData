@@ -2,7 +2,7 @@ package TugasJobsheet7;
 
 public class Tugas3 {
 
-    public int data[], jmlData, maks;
+    public int data[], jmlData, maks, count, posisi[];
 
     Tugas3(int d[], int n) {
         this.jmlData = n;
@@ -30,15 +30,16 @@ public class Tugas3 {
         System.out.println("");
     }
 
-    public int FindBinarySearch(int cari,int left, int right) {
+    public int FindBinarySearch(int cari, int left, int right) {
         int mid;
         if (right >= left) {
             mid = (left + right) / 2;
+            maks = cari;
             if (data[mid] == cari) {
-                maks = data[mid];
+                jumlahTerbesar(data[mid]);
                 return (mid);
-            } else if (data[mid] < cari) {
-                return FindBinarySearch(cari, left, mid - 1);
+            } else if (data[mid - 1] > data[mid]) {
+                return FindBinarySearch(data[mid - 1], left, mid - 1);
             } else {
                 return FindBinarySearch(data[mid], mid + 1, right);
             }
@@ -46,11 +47,38 @@ public class Tugas3 {
         return -1;
     }
 
-    public void TampilPosisi(int x, int pos) {
-        if (pos != -1) {
-            System.out.println("data: " + x + " ditemukan pada indeks " + pos);
-        } else {
-            System.out.println("data: " + x + " tidak ditemukan");
+    public void tampilPosisi(int cari) {
+        posisi = new int[count];
+        int j=0;
+        for (int i = 0; i < jmlData; i++) {
+            if (cari == data[i]) {
+                posisi[j] = i;
+                j++;
+            }
+        }
+        System.out.println("Data terbesar ditemukan sebanyak " + count);
+        if (count > 1) {
+            for (int i = 0; i < posisi.length; i++) {
+                if (posisi[i] != -1) {
+                    System.out.println("Data terbesar: " + maks + " ditemukan pada indeks " + posisi[i]);
+                } else {
+                    System.out.println("Data: tidak ditemukan");
+                }
+            }
+        }else{
+            if (posisi[0] != -1) {
+                    System.out.println("Data terbesar: " + maks + " ditemukan pada indeks " + posisi[0]);
+                } else {
+                    System.out.println("Data: tidak ditemukan");
+                }
+        }
+    }
+
+    public void jumlahTerbesar(int cari) {
+        for (int i = 0; i < jmlData; i++) {
+            if (cari == data[i]) {
+                count++;
+            }
         }
     }
 }
