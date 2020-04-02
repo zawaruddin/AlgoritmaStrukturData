@@ -21,7 +21,7 @@ public class kataTerbalik {
         top--;
     }
 
-    public void exchange() {
+    public void tukar() {
         String kata = "";
         for (int i = 0; i < size; i++) {
             kata += String.valueOf(kalimat.charAt(i));

@@ -8,7 +8,7 @@ public class kataTerbalikMain {
         System.out.print("Masukkan kalimat  : ");
         String kalimat = dhimas.nextLine();
         kataTerbalik kT = new kataTerbalik(kalimat);
-        kT.exchange();
+        kT.tukar();
         kT.print();
         
     }
