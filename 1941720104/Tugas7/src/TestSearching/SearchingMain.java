@@ -16,8 +16,8 @@ public class SearchingMain {
     
     public static void main(String[] args) {
         System.out.print("Masukkan banyaknya angka: ");
-        int data[] = {10, 20, 30, 40, 50, 60, 70, 80, 90, 100};
-        int data2[] = {100, 90, 80, 70, 60, 50, 40, 30, 20, 10};
+        int data[] = {20,37,14,7,67,89,23,46};
+        int data2[] = {37, 20, 14,7,67,89,23,46};
         int cari;
         
         Searching cariData = new Searching(data, 10);

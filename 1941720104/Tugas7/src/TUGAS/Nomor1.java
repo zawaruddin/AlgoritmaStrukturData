@@ -43,7 +43,7 @@ public class Nomor1 {
     }
     
     public static void main(String[] args) {
-        int n[] = {10, 40, 30, 50, 70, 20, 100, 90};
+        int n[] = {20,37,14,7,67,89,23,46};
         System.out.println("Sebelum di Urutkan merge sort ");
         for (int i = 0; i < n.length; i++) {
             System.out.print(n[i] + " ");
