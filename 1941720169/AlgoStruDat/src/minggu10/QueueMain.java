@@ -8,6 +8,8 @@ public class QueueMain {
         System.out.println("3. Print");
         System.out.println("4. Peek Front");
         System.out.println("5. Peek Rear");
+        System.out.println("6. Peek Position");
+        System.out.println("7. Peek At-");
         System.out.println("------------------");
     }
     public static void main(String[] args) {
@@ -42,7 +44,18 @@ public class QueueMain {
                 case 5:
                     Q.peekRear();
                     break;
+                case 6:
+                    System.out.println("");
+                    Q.print();
+                    System.out.print("Masukkan data: ");
+                    int data = dhimas.nextInt();
+                    Q.peekPosition(data);
+                    break;
+                case 7:
+                    System.out.print("Tampilkan data pada antrian indeks ke-");
+                    int position = dhimas.nextInt();
+                    Q.peekAt(position);
             }
-        }while(pilih ==1||pilih==2||pilih==3||pilih==4||pilih==5);
+        }while(pilih ==1||pilih==2||pilih==3||pilih==4||pilih==5||pilih==6||pilih==7);
     }
 }
