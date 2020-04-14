@@ -12,7 +12,19 @@ public class Searching {
             data[i] = Data[i];
         }
     }
-
+    public int FindSeqSeach(int cari)
+{
+        int posisi = -5;
+        for(int j =0; j<jumData; j++)
+       {
+              if(data[j]==cari)
+             {
+                     posisi = j;
+                     break;
+             }
+        }
+  return cari;
+}
     public int FindSeqSearch(int cari) {
         int posisi = -1;
         for (int j = 0; j < jumData; j++) {
@@ -32,8 +44,10 @@ public class Searching {
     }
 
     public int FindBinarySearch(int cari, int left, int right) {
-        int mid;
+        int mid, i=0;
         if (right >= left) {
+            i++;
+            System.out.println(i);
             mid = (left + right) / 2;
             if (cari == data[mid]) {
                 return (mid);
@@ -43,6 +57,7 @@ public class Searching {
                 return FindBinarySearch(cari, mid + 1, right);
             }
         }
+        
         return -1;
     }
     public void mergeSort() {

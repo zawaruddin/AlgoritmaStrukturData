@@ -3,7 +3,7 @@ package sort;
 public class SelectionMain {
     
     public static void main(String[] args) {
-        int arr[] = {10,50,25,1,3};
+        int arr[] = {6,5,3,1,8 ,7 , 2 ,4};
         Selection sl = new Selection();
         for(int i:arr){
             System.out.print(i+" ");

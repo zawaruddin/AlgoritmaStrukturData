@@ -6,8 +6,8 @@ public class test2 {
 
     public static void main(String[] args) {
         test2 b = new test2();
-        int data[] = {2, 4, 1, 9, 1, 5, 7, 0, 9};
-        int x = 1;
+        int data[] = {1, 3, 9, 11, 12, 15, 17, 23, 31, 35, 45};
+        int x = 31;
         int hasil = search(data, x, 0, data.length - 1);
         if (hasil != -1) {
             System.out.println("Data terbesar: " + x + " ditemukan pada indeks " + hasil);
@@ -17,8 +17,8 @@ public class test2 {
     }
 
     static int search(int b[], int cari, int l, int r) {
-        bubble(b);
-        int i, mid;
+        //bubble(b);
+        int i=0, mid;
         while (l <= r) {
             mid = (l + r) / 2;
             if (cari == b[mid]) {
@@ -28,7 +28,10 @@ public class test2 {
             } else {
                 l = mid + 1;
             }
+            System.out.println(i);
+            i++;
         }
+        
         return -1;
     }
     static void bubble(int arr[]) {

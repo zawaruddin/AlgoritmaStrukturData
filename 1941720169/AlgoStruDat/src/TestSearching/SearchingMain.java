@@ -3,11 +3,11 @@ package TestSearching;
 public class SearchingMain {
 
     public static void main(String[] args) {
-        int data[] = {10,40,90,50,70,20,100,30};
-        Searching pencarian = new Searching(data, 8);
+        int data[] = {1, 3, 9, 11, 12, 15, 17, 23, 31, 35, 45};
+        Searching pencarian = new Searching(data, data.length);
         System.out.println("Isi Array: ");
         pencarian.tampilData();
-        int cari = 30;
+        int cari = 31;
         System.out.println("Menggunakan Sequential Search");
         int posisi = pencarian.FindSeqSearch(cari);
         if(posisi != -1){
