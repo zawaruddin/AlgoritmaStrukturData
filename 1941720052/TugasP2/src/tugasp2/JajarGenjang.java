@@ -9,17 +9,16 @@ package tugasp2;
  *
  * @author Windows 10
  */
-public class Lingkaran {
 
-    double phi = 3.14;
-    double r;
+public class JajarGenjang {
 
-    double hitungLuas() {
-        return phi * r * r;
+    int tinggi, panjang, sisiMiring;
+
+    int hitungLuas() {
+        return panjang * tinggi;
     }
 
-    double hitungKeliling() {
-        return phi * 2 * r;
+    int hitungKeliling() {
+        return 2 * (panjang + sisiMiring);
     }
-
 }

@@ -9,17 +9,10 @@ package tugasp2;
  *
  * @author Windows 10
  */
-public class Lingkaran {
-
-    double phi = 3.14;
-    double r;
-
-    double hitungLuas() {
-        return phi * r * r;
+public class Tanah {
+    int jmlTanah, panjang, lebar;
+    
+    int hitungLuasTanah(){
+        return panjang * lebar;
     }
-
-    double hitungKeliling() {
-        return phi * 2 * r;
-    }
-
 }

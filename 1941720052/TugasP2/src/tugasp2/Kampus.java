@@ -9,17 +9,18 @@ package tugasp2;
  *
  * @author Windows 10
  */
-public class Lingkaran {
+public class Kampus {
 
-    double phi = 3.14;
-    double r;
+    int nilai1, nilai2;
 
-    double hitungLuas() {
-        return phi * r * r;
-    }
-
-    double hitungKeliling() {
-        return phi * 2 * r;
+    int nilaiTerbaik() {
+        int maks;
+        if (nilai2 < nilai1) {
+            maks = nilai1;
+        } else {
+            maks = nilai2;
+        }
+        return maks;
     }
 
 }
