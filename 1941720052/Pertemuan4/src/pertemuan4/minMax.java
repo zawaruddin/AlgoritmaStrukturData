@@ -11,49 +11,50 @@ package pertemuan4;
  */
 public class minMax {
 
-    public int nilaiArray, min, max;
+    public int nilaiArray, min, max;                                                                    //~     
+    void minMax(int arr[], int n) {                                                             
+        min = arr[0];                                                                                  //O(1)
+        max = arr[0];                                                                                  //O(1)
 
-    void minMax(int arr[], int n) {
-        min = arr[0];
-        max = arr[0];
-
-        for (int a = 0; a < 5; a++) {
-            if (arr[a] < min) {
-                min = arr[a];
-            } else if (arr[a] > max) {
-                max = arr[a];
+        for (int a = 0; a < 5; a++) {                                                                  //O(n)=O(5)
+            if (arr[a] < min) {                                                                        //~
+                min = arr[a];                                                                          //O(1)
+            } else if (arr[a] > max) {                                                                 //~
+                max = arr[a];                                                                          //O(1)
             }
         }
     }
-    int max(){
-        return max;
+    int max(){                                                                                        //~
+        return max;                                                                                   //O(1)
     }
-    int min(){
-        return min;
+    int min(){                                                                                       //~
+        return min;                                                                                  //O(1)
     }
 
     public static void max_min(int arr[], int indeks_awal, int indeks_akhir, Maxmin hasil) {
-        int indeks_tengah;
-        Maxmin hasil1 = new Maxmin();
-        Maxmin hasil2 = new Maxmin();
+        int indeks_tengah;                                                                           //~
+        Maxmin hasil1 = new Maxmin();                                                                //~
+        Maxmin hasil2 = new Maxmin();                                                                //~
 
-        if (indeks_awal == indeks_akhir) {
-            hasil.minimum = hasil.maximum = arr[indeks_awal];
-        } else if (indeks_akhir - indeks_awal == 1) {
+        if (indeks_awal == indeks_akhir) {                                                          //O(1)
+            hasil.minimum = hasil.maximum = arr[indeks_awal];                                       //O(1)
+        } 
+        else if (indeks_akhir - indeks_awal == 1) {                                                 
             if (arr[indeks_awal] > arr[indeks_akhir]) {
-                hasil.minimum = arr[indeks_akhir];
-                hasil.maximum = arr[indeks_awal];
+                hasil.minimum = arr[indeks_akhir];                                                  //O(1)
+                hasil.maximum = arr[indeks_awal];                                                   //O(1)
             } else {
-                hasil.minimum = arr[indeks_awal];
-                hasil.maximum = arr[indeks_akhir];
+                hasil.minimum = arr[indeks_awal];                                                   //O(1)
+                hasil.maximum = arr[indeks_akhir];                                                  //O(1)
             }
-        } else {
-            indeks_tengah = (indeks_awal + indeks_akhir) / 2;
-            max_min(arr, indeks_awal, indeks_tengah, hasil1);
-            max_min(arr, indeks_tengah + 1, indeks_akhir, hasil2);
+        } 
+        else {                                                                                      //O(2^n)    
+            indeks_tengah = (indeks_awal + indeks_akhir) / 2;                                       //O(1)
+            max_min(arr, indeks_awal, indeks_tengah, hasil1);                                       //O(1)
+            max_min(arr, indeks_tengah + 1, indeks_akhir, hasil2);                                  //O(1)
 
-            hasil.minimum = (hasil1.minimum < hasil2.minimum) ? hasil1.minimum : hasil2.minimum;
-            hasil.maximum = (hasil.maximum > hasil2.maximum) ? hasil1.maximum : hasil2.maximum;
+            hasil.minimum = (hasil1.minimum < hasil2.minimum) ? hasil1.minimum : hasil2.minimum;    //O(1)
+            hasil.maximum = (hasil.maximum > hasil2.maximum) ? hasil1.maximum : hasil2.maximum;     //O(1)
         }
 
     }

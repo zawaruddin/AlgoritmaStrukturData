@@ -10,7 +10,7 @@ package pertemuan4;
  * @author Windows 10
  */
 public class Maxmin {
-    public int maximum;
-    public int minimum;
+    public int maximum;         
+    public int minimum;         
     
 }
