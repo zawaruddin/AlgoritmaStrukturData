@@ -43,7 +43,7 @@ public class Searching {
             mid = (left + right)/2;
             if(cari == data[mid]){
                 return (mid);
-            } else if(data[mid] > cari){
+            } else if(data[mid] < cari){
                 return FindBinarySearch(cari, left, mid - 1);
             } else{
                 return FindBinarySearch(cari, mid+1, right);
@@ -56,6 +56,18 @@ public class Searching {
             System.out.println("data : "+x+" ditemukan pada indeks "+pos);
         }else{
             System.out.println("data : "+x+" data tidak ditemukan");
+        }
+    }
+    //menambahkan method sort pada class searching
+    public void Sort(){
+        for(int i=0; i<data.length; i++){
+            int temp = data[i];
+            int j = i;
+            while((j>0)&&(data[j-1]<temp)){
+                data[j]= data[j-1];
+                j--;
+            }
+            data[j] = temp;
         }
     }
     

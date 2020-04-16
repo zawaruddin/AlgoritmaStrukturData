@@ -9,15 +9,25 @@ package testsearching;
  *
  * @author Windows 10
  */
+//modifikasi class main
+import java.util.Scanner;
 public class SearchingMain {
     public static void main(String[] args) {
-        int data[] = {100,90,80,70,60,50,40,30};
+        Scanner luluk = new Scanner(System.in);
+        System.out.print("Masukkan jumlah elemen : ");
+        int elemen = luluk.nextInt();
+        int data[] = new int[elemen] ;
         
-        Searching pencarian = new Searching(data, 8);
+        for(int i=0; i<elemen; i++){
+            System.out.print("Masukkan data pada indeks ke-"+i+" : ");
+            data[i] = luluk.nextInt();
+        }
+        
+        Searching pencarian = new Searching(data, elemen);
         System.out.println("isi Array : ");
         pencarian.TampilData();
-        
-        int cari = 30;
+        System.out.println("Masukkan data yang akan dicari: ");
+        int cari = luluk.nextInt(); 
         System.out.println("Menggunakan sequential Search");
         int posisi = pencarian.FindSeqSearch(cari);
         
