@@ -12,6 +12,11 @@ package pertemuan3;
 public class Pangkat {
 
     public int nilai, pangkat;
+    
+    Pangkat(){
+        this.nilai = nilai;
+        this.pangkat = pangkat;
+    }
 
     public int pangkatBF(int a, int n) {
         int hasil = 1;
