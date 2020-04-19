@@ -45,11 +45,6 @@ public class MainLinkedLists {
         int pilih, index;
         String item;
         try {
-            data.addFirst("1");
-            data.add("3", 1);
-            data.add("5", 2);
-            data.add("8", 3);
-            data.add("9",4);
             do {
                 menu();
                 System.out.print("Masukkan Pilihan -|>");
