@@ -9,11 +9,17 @@ package tugas11;
  *
  * @author Daffa Cahyo
  */
-public class Node {    
-    int data;
-    Node next;
-    public Node(int data, Node next){
-        this.data = data;
+public class node {
+
+    String NIM;
+    String nama;
+    String Alamat;
+    node next;
+
+    public node(String NIM, String nama, String Alamat, node next) {
+        this.NIM = NIM;
+        this.nama = nama;
+        this.Alamat = Alamat;
         this.next = next;
     }
 }
