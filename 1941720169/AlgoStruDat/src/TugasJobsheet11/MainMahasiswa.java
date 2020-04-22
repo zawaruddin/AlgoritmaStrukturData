@@ -96,7 +96,7 @@ public class MainMahasiswa {
                             newData.nama = arbi.nextLine();
                             System.out.print("Masukkan Alamat: ");
                             newData.alamat = arbi.nextLine();
-                            System.out.print("Posisi setelah data nama: ");
+                            System.out.print("Posisi setelah data nim: ");
                             String index1 = arbi.nextLine();
                             data.addByValue(newData, index1);
                             data.print();
@@ -109,13 +109,9 @@ public class MainMahasiswa {
                             data.remove(index);
                         }else if(opr==2){
                             data.print();
-                            System.out.print("Masukkan Nim: ");
-                            newData.nim = arbi.nextLine();
-                            System.out.print("Masukkan Nama: ");
-                            newData.nama = arbi.nextLine();
-                            System.out.print("Masukkan Alamat: ");
-                            newData.alamat = arbi.nextLine();
-                            data.removeByKey(newData);
+                            System.out.print("Masukkan Nim dari data yang akan dihapus: : ");
+                            String nim = arbi.nextLine();
+                            data.removeByKey(nim);
                             data.print();
                         } else if (opr == 3) {
                             System.out.print("Menjalankan Penghapusan");

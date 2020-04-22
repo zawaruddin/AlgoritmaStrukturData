@@ -49,7 +49,7 @@ public class MLinkedList {
     public void addByValue(MLinkedList data, String search) throws Exception {
         if (!isEmpty()) {
             Node tmp = head;
-            while (tmp != null && !tmp.data.nama.equals(search)) {
+            while (tmp != null && !tmp.data.nim.equals(search)) {
                 tmp = tmp.next;
             }
 
@@ -122,18 +122,18 @@ public class MLinkedList {
         }
     }
     
-    public void removeByKey(MLinkedList key) throws Exception {
+    public void removeByKey(String key) throws Exception {
         if (isEmpty()) {
             throw new Exception("LinkedLists kosong");
         } else {
-            if (head.data.equals(key) && head.next != null) {
-                head = head.next;
-            } else if (head.data.equals(key)&& head.next == null) {
+            if (head.data.nim.equals(key) && head.next != null) {
+                removeFirst();
+            } else if (head.data.nim.equals(key)&& head.next == null) {
                 clear();
             } else {
                 Node temp = head;
                 while (temp.next != null) {
-                    if (temp.next.data.equals(key)) {
+                    if (temp.next.data.nim.equals(key)) {
                         temp.next = temp.next.next;
                         break;
                     } else {

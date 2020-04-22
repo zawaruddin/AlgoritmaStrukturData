@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package TugasJobsheet11;
 
 /**
@@ -12,7 +7,7 @@ package TugasJobsheet11;
 public class LLPembayaran {
 
     node Head;
-    int size, count = -1;
+    int size;
     String nama, alamat;
 
     public LLPembayaran() {
@@ -77,13 +72,11 @@ public class LLPembayaran {
     public void removeFirst() throws Exception {
         Head = Head.next;
         size--;
-        count--;
     }
 
     public void clear() {
         Head = null;
         size = 0;
-        count = -1;
     }
 //------------------------------------------------------------------------------
 

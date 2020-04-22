@@ -17,6 +17,7 @@ public class PembayaranMain {
         System.out.println("5. Peek Rear");
         System.out.println("6. Peek Position");
         System.out.println("7. Peek At-");
+        System.out.println("8. Reset antrian");
         System.out.println("------------------");
     }
 
@@ -43,7 +44,6 @@ public class PembayaranMain {
                         } else {
                             LL.addLast(data);
                         }
-                        System.out.println("Antrian Berhasil dimasukkan nomor antrian"+LL.count);
                         break;
                     case 2:
                         data = LL.Dequeue();
@@ -79,8 +79,13 @@ public class PembayaranMain {
                         System.out.print("Tampilkan data pada antrian indeks ke-");
                         int position = dhimas.nextInt();
                         LL.cariByIndex(position);
+                        break;
+                    case 8:
+                        System.out.println("Mereset Antrian");
+                        LL.clear();
+                        System.out.println("Antrian Direset");
                 }
-            } while (pilih == 1 || pilih == 2 || pilih == 3 || pilih == 4 || pilih == 5 || pilih == 6 || pilih == 7);
+            } while (pilih == 1 || pilih == 2 || pilih == 3 || pilih == 4 || pilih == 5 || pilih == 6 || pilih == 7 ||pilih == 8);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
