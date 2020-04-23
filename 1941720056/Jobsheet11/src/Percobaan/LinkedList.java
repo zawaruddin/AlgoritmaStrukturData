@@ -93,4 +93,20 @@ public class LinkedList {
             System.out.println("LinkedList Kosong");
         }
     }
+    public void addByValue(int idx,int item,int cr) throws Exception{
+        if(cr==item){
+            System.out.println("add by value ");
+            add(item,idx);
+        }
+    }
+    public void removeByValue(int idx,int item,int cari) throws Exception{
+        if (cari==item){
+            System.out.println("Remove by value ");
+            remove(idx);
+            
+        }else{
+            System.out.println("Nilai null");
+        }
+    }
+    
 }

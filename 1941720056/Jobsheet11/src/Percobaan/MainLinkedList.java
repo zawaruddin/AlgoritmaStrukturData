@@ -17,6 +17,10 @@ public class MainLinkedList {
             data.print();
             data.remove(1);
             data.print();
+            data.addByValue(2,7,7);
+            data.print();
+            data.removeByValue(1,9,9);
+            data.print();
             data.clear();
             data.print();
         }catch (Exception e){
