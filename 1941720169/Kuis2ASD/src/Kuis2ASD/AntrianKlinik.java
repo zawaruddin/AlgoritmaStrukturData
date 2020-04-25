@@ -124,7 +124,7 @@ public class AntrianKlinik {
 
         if (tmp != null && no < tmp.data.no) {
             System.out.println("\nData sudah tidak berada dalam antrian\n");
-        } else if (no >= tmp.data.no) {
+        } else if (tmp != null && no >= tmp.data.no) {
             while (tmp != null && i < no) {
                 totalAntrian++;
                 totalWaktu += tmp.data.waktu;
@@ -177,17 +177,21 @@ public class AntrianKlinik {
         int count[] = new int[9];
         String daftarKeluhan[] = {"Demam", "Flu", "Sakit Kepala", "Asma", "Diare", "Sakit Gigi", "Sakit Mata", "Keseleo", "Susah Tidur"};
 
-        for (int i = 0; i < daftarKeluhan.length; i++) {
-            tmp = Head;
-            while (tmp != null) {
-                if (tmp.data.keluhan.equals(daftarKeluhan[i])) {
-                    count[i] += 1;
+        if (tmp != null) {
+            for (int i = 0; i < daftarKeluhan.length; i++) {
+                tmp = Head;
+                while (tmp != null) {
+                    if (tmp.data.keluhan.equals(daftarKeluhan[i])) {
+                        count[i] += 1;
+                    }
+                    tmp = tmp.next;
                 }
-                tmp = tmp.next;
+                if (count[i] > 0) {
+                    System.out.println(daftarKeluhan[i] + ": " + count[i]);
+                }
             }
-            if (count[i] > 0) {
-                System.out.println(daftarKeluhan[i] + ": " + count[i]);
-            }
+        } else {
+            System.out.println("Antrian masih kosong");
         }
         System.out.println("");
     }

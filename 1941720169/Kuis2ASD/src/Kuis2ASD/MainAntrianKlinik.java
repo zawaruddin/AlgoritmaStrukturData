@@ -74,14 +74,18 @@ public class MainAntrianKlinik {
                     Node tmp = antrian.Head;
                     System.out.println("Cek Data Pasien");
                     System.out.print("Daftar Antrian: ");
-                    while(tmp!=null){
-                        System.out.print(tmp.data.no+" ");
-                        tmp = tmp.next;
+                    if (tmp != null) {
+                        while (tmp != null) {
+                            System.out.print(tmp.data.no + " ");
+                            tmp = tmp.next;
+                        }
+                        System.out.println("");
+                        System.out.print("Masukkan nomor pasien: ");
+                        no = dhimas.nextInt();
+                        antrian.cekPasienByNo(no);
+                    } else {
+                        System.out.println("Antrian masih kosong");
                     }
-                    System.out.println("");
-                    System.out.print("Masukkan nomor pasien: ");
-                    no = dhimas.nextInt();
-                    antrian.cekPasienByNo(no);
                     break;
                 case 6:
                     System.out.println("Statistik Keluhan");
