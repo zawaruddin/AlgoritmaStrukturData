@@ -1,15 +1,20 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package TugasJobsheet12;
 
 /**
  *
  * @author dhimas
  */
-public class DLLNode1 {
+public class SortDLL {
 
     Node1 head;
     int size;
 
-    public DLLNode1() {
+    public SortDLL() {
         head = null;
         size = 0;
     }
@@ -203,4 +208,27 @@ public class DLLNode1 {
         }
     }
 
+    Node1 bubbleSort(Node1 start) {
+        int swap, i;
+        Node1 a;
+        Node1 b = null;
+        if (start == null) {
+            return null;
+        }
+        do {
+            swap = 0;
+            a = start;
+            while (a.next != b) {
+                if (a.data > a.next.data) {
+                    int t = a.data;
+                    a.data = a.next.data;
+                    a.next.data = t;
+                    swap = 1;
+                }
+                a = a.next;
+            }
+            b = a;
+        } while (swap != 0);
+        return start;
+    }
 }

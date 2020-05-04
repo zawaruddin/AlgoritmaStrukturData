@@ -1,15 +1,22 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package TugasJobsheet12;
 
 /**
  *
  * @author dhimas
  */
-public class DLLNode1 {
+public class MahasiswaDLL {
 
-    Node1 head;
+    Node2 head;
     int size;
+    int nilai;
+    String nama;
 
-    public DLLNode1() {
+    public MahasiswaDLL() {
         head = null;
         size = 0;
     }
@@ -18,49 +25,49 @@ public class DLLNode1 {
         return head == null;
     }
 
-    public void addFirst(int item) {
+    public void addFirst(MahasiswaDLL item) {
         if (isEmpty()) {
-            head = new Node1(null, item, null);
+            head = new Node2(null, item, null);
         } else {
-            Node1 newNode = new Node1(null, item, head);
+            Node2 newNode = new Node2(null, item, head);
             head.prev = newNode;
             head = newNode;
         }
         size++;
     }
 
-    public void addLast(int item) {
+    public void addLast(MahasiswaDLL item) {
         if (isEmpty()) {
             addFirst(item);
         } else {
-            Node1 current = head;
+            Node2 current = head;
             while (current.next != null) {
                 current = current.next;
             }
-            Node1 newNode = new Node1(current, item, null);
+            Node2 newNode = new Node2(current, item, null);
             current.next = newNode;
             size++;
         }
     }
 
-    public void add(int item, int index) throws Exception {
+    public void add(MahasiswaDLL item, int index) throws Exception {
         if (isEmpty()) {
             addFirst(item);
         } else if (index < 0 || index > size) {
             throw new Exception("Nilai indek di luar batas");
         } else {
-            Node1 current = head;
+            Node2 current = head;
             int i = 0;
             while (i < index) {
                 current = current.next;
                 i++;
             }
             if (current.prev == null) {
-                Node1 newNode = new Node1(null, item, current);
+                Node2 newNode = new Node2(null, item, current);
                 current.prev = newNode;
                 head = newNode;
             } else {
-                Node1 newNode = new Node1(current.prev, item, current);
+                Node2 newNode = new Node2(current.prev, item, current);
                 newNode.prev = current.prev;
                 newNode.next = current;
                 current.prev.next = newNode;
@@ -81,9 +88,10 @@ public class DLLNode1 {
 
     public void print() {
         if (!isEmpty()) {
-            Node1 tmp = head;
+            Node2 tmp = head;
+            System.out.println("Nilai\t|\tNama");
             while (tmp != null) {
-                System.out.println(tmp.data);
+                System.out.println(tmp.data.nilai + "\t|\t" + tmp.data.nama);
                 tmp = tmp.next;
             }
         } else {
@@ -111,7 +119,7 @@ public class DLLNode1 {
             size--;
             return;
         }
-        Node1 current = head;
+        Node2 current = head;
         while (current.next.next != null) {
             current = current.next;
         }
@@ -125,7 +133,7 @@ public class DLLNode1 {
         } else if (index == 0) {
             removeFirst();
         } else {
-            Node1 current = head;
+            Node2 current = head;
             int i = 0;
             while (i < index) {
                 current = current.next;
@@ -146,45 +154,45 @@ public class DLLNode1 {
         }
     }
 
-    public int getFirst() throws Exception {
+    public MahasiswaDLL getFirst() throws Exception {
         if (isEmpty()) {
             throw new Exception("Linked List kosong");
         }
         return head.data;
     }
 
-    public int getLast() throws Exception {
+    public MahasiswaDLL getLast() throws Exception {
         if (isEmpty()) {
             throw new Exception("Linked List kosong");
         }
-        Node1 tmp = head;
+        Node2 tmp = head;
         while (tmp.next != null) {
             tmp = tmp.next;
         }
         return tmp.data;
     }
 
-    public int get(int index) throws Exception {
+    public MahasiswaDLL get(int index) throws Exception {
         if (isEmpty() || index >= size) {
             throw new Exception("Nilai indeks di luar batas.");
         }
-        Node1 tmp = head;
+        Node2 tmp = head;
         for (int i = 0; i < index; i++) {
             tmp = tmp.next;
         }
         return tmp.data;
     }
 
-    public void cari(int item) {
-        Node1 tmp = head;
+    public void cari(String item) {
+        Node2 tmp = head;
         Boolean search = false;
         int i = 0;
         if (tmp != null) {
-            if (tmp.data == item) {
+            if (tmp.data.nama.equalsIgnoreCase(item)) {
                 search = true;
             } else if (tmp.next != null) {
                 while (tmp != null) {
-                    if (tmp.data == item) {
+                    if (tmp.data.nama.equalsIgnoreCase(item)) {
                         search = true;
                         break;
                     } else {
@@ -203,4 +211,27 @@ public class DLLNode1 {
         }
     }
 
+    Node2 bubbleSort(Node2 start) {
+        int swap, i;
+        Node2 a;
+        Node2 b = null;
+        if (start == null) {
+            return null;
+        }
+        do {
+            swap = 0;
+            a = start;
+            while (a.next != b) {
+                if (a.data.nilai < a.next.data.nilai) {
+                    MahasiswaDLL t = a.data;
+                    a.data = a.next.data;
+                    a.next.data = t;
+                    swap = 1;
+                }
+                a = a.next;
+            }
+            b = a;
+        } while (swap != 0);
+        return start;
+    }
 }
