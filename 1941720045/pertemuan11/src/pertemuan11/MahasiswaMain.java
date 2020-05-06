@@ -59,7 +59,7 @@ public class MahasiswaMain {
                         }else if(jawab.equalsIgnoreCase("c")){
                             mhs.clear();
                         }else{
-                            System.out.println("maaf inputan anda tidak sesuai");
+                            System.out.println("Maaf inputan anda tidak sesuai");
                         }
                  break;
                 case 4:
