@@ -24,15 +24,6 @@ public class BinaryTreeMain {
         BinaryTree bt = new BinaryTree();
         int pilih, data;
         do {
-            bt.add(6);
-        bt.add(4);
-        bt.add(8);
-        bt.add(3);
-        bt.add(5);
-        bt.add(7);
-        bt.add(9);
-        bt.add(10);
-        bt.add(15);
             menu();
             System.out.println("=====================");
             pilih = dhimas.nextInt();
@@ -60,7 +51,7 @@ public class BinaryTreeMain {
                 case 3:
                     System.out.print("Masukkan data : ");
                     data = dhimas.nextInt();
-                    System.out.printf("Find %s %s",data,bt.find(data));
+                    System.out.printf("Find %s %s", data, bt.find(data));
                     System.out.println("");
                 case 4:
                     bt.traverseInOrder(bt.root);
