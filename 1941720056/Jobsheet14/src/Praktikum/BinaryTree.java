@@ -152,4 +152,70 @@ public class BinaryTree {
            }
        }
    }
+   Node AddRekursif(Node current,int data){
+       if(current == null){
+           return new Node (data);
+       }
+       if (data<current.data){
+           current.left = AddRekursif(current.left, data);
+       }else if(data>current.data){
+       current.right =AddRekursif(current.right,data);
+       }else{
+           return current;
+       }
+       return current;
+   }
+   int GetMin(Node node){
+       if(node==null){
+           System.out.println("Tree Is Empty");
+           return 0;
+       }
+       while (node.left !=null){
+           node = node.left;
+       }
+       return node.data;
+   }
+   int GetMax(Node node){
+       if(node==null){
+           System.out.println("Tree Is Empty");
+           return 0;
+       }
+       while (node.right !=null){
+           node = node.right;
+       }
+       return node.data;
+   }
+   void PrintMinMax(Node node){
+       System.out.println("");
+       int Min = GetMin(node);
+       System.out.println("Nilai Min : "+ Min);
+       int Max = GetMax(node);
+       System.out.println("Nilai Max : "+ Max);
+   }
+   void leaf (Node node){
+       if(node==null){
+           return ;
+       }
+       if(node.left == null && node.right == null){
+           System.out.println("Leaf : "+node.data);
+       }
+       else{
+           if(node.left !=null){
+               leaf(node.left);
+           }if(node.right !=null){
+               leaf(node.right);
+           }
+       }
+   }
+   int HitungLeaf(Node node){
+       if(node==null){
+           return 0 ;
+       }
+       if(node.left == null && node.right == null){
+           return 1;
+       }
+       else{
+           return HitungLeaf(node.left)+HitungLeaf(node.right);
+       }
+   }
 }

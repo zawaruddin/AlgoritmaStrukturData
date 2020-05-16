@@ -1,10 +1,68 @@
 package Praktikum;
-
+import java.util.Scanner;
 public class BinaryTreeMain {
     public static void main(String[] args) {
         BinaryTree bt = new BinaryTree();
+        Scanner retno = new Scanner(System.in);
+        int pilih, data1, data2, data3;
         
-        bt.add(6);
+        do {            
+            System.out.println("=======================================");
+            System.out.println("            MENU  BINARY TREE           ");
+            System.out.println("=======================================");
+            System.out.println(" Memilih Menu ");
+            System.out.println(" 1. Add ");
+            System.out.println(" 2. Delete ");
+            System.out.println(" 3. Find ");
+            System.out.println(" 4. traverse inOrder");
+            System.out.println(" 5. traverse preOrder ");
+            System.out.println(" 6. traverse postOrder ");
+            System.out.println(" 7. Keluar ");
+            System.out.println("---------------------------------------");
+            System.out.print("Pilih: ");
+            pilih = retno.nextInt();
+            System.out.println("---------------------------------------");
+            
+            switch(pilih){
+                    case 1:
+                        System.out.print(" Masukkan Data: ");
+                        data1 = retno.nextInt();
+                        bt.add(data1);
+                        break;
+
+                    case 2:
+                        System.out.print(" Masukkan Data: ");
+                        data2 = retno.nextInt();
+                        bt.delete(data2);
+                        break;
+                        
+                    case 3: 
+                        System.out.print(" Masukkan Data: ");
+                        data3 = retno.nextInt();                        
+                        bt.find(data3);
+                        break;
+                        
+                    case 4:
+                        bt.traverseInOrder(bt.root); 
+                        System.out.println();
+                        break;
+                        
+                    case 5: 
+                        bt.traversePreOrder(bt.root); 
+                        System.out.println();
+                        break;
+                        
+                    case 6:
+                        bt.traversePostOrder(bt.root);
+                        System.out.println();
+                        break;
+                }
+            
+             } while (pilih >=1 && pilih <= 6 );
+        
+        
+        
+   /*     bt.add(6);
         bt.add(4);
         bt.add(8);
         bt.add(3);
@@ -24,5 +82,10 @@ public class BinaryTreeMain {
         bt.delete(8);
         bt.traversePreOrder(bt.root);
         System.out.println("");
+        bt.PrintMinMax(bt.root);
+        System.out.println("");
+        bt.leaf(bt.root);
+        System.out.println("");
+        System.out.println("Jumlah Leaf : "+bt.HitungLeaf(bt.root));*/
     }
 }
