@@ -25,16 +25,16 @@ public class Cd_Fajar {
             pilihan = fajar.nextInt();
             switch(pilihan){
                 case 1:
-                    System.out.print("Masukkan Kode Buku: ");
+                    System.out.print("Masukkan Kode CD: ");
                     int kdBuku = fajar.nextInt();
-                    System.out.print("Masukkan Judul Buku: ");
+                    System.out.print("Masukkan Judul : ");
                     String judul = fajar.next();
                     System.out.print("Masukkan Stok: ");
                     int stok = fajar.nextInt();
                     String keadaan = "Baik";
                     CdObject data = new CdObject(kdBuku, judul, stok, keadaan);
                     dll.addFirst(data);
-//                    dll.upStok(kdBuku, judul, stok, data);
+
                     break;
                 case 2:
                     System.out.print("Masukkan index: ");
@@ -51,7 +51,7 @@ public class Cd_Fajar {
                     dll.print();
                     break;
                 case 5:
-                    System.out.print("Masukkan Kode Buku atau Judul");
+                    System.out.print("Masukkan Kode CD atau Judul");
                     Object key = fajar.next();
                     dll.getFind(key);
                     break;
