@@ -206,6 +206,5 @@ public class DoubleLinkedListCD {
     }   
 
     void addFirst(int index, int kode, String judul, String penerbit, int stok) {
-      
     }
 }
